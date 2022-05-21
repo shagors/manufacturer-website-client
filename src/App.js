@@ -1,8 +1,9 @@
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <h1>This text for tailwind</h1>
+      <Navbar></Navbar>
     </div>
   );
 }
