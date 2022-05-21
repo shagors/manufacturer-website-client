@@ -18,7 +18,7 @@ const Tools = () => {
 
     return (
         <div className='my-10 lg:px-20'>
-            <h1 className='text-3xl text-center text-primary font-bold'>Our Manufacture Tools</h1>
+            <h1 className='text-4xl text-center text-primary font-bold uppercase'>Our Manufacture Parts</h1>
             <div className='grid lg:grid-cols-3 gap-5 mt-10'>
                 {
                     parts?.map(part => <Tool

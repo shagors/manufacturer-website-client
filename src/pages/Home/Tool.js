@@ -3,15 +3,16 @@ import React from 'react';
 const Tool = ({part}) => {
     const {img, name, price, description} = part;
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-                <img src={img} alt={name} class="rounded-xl" />
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <figure className="px-10 pt-10">
+                <img src={img} alt={name} className="rounded-xl" />
             </figure>
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">{name}</h2>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">{name}</h2>
+                <h2 className="card-title">$ {price}</h2>
                 <p>{description}</p>
-                <div class="card-actions">
-                <button class="btn btn-primary">Order</button>
+                <div className="card-actions">
+                <button className="btn btn-primary">Order</button>
                 </div>
             </div>
         </div>
