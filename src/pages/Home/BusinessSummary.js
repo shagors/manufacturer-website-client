@@ -2,6 +2,7 @@ import React from 'react';
 import people from '../../assets/icons/people.jpg'
 import world from '../../assets/icons/world.png'
 import money from '../../assets/icons/money.png'
+import award from '../../assets/icons/award.jpg'
 
 const BusinessSummary = () => {
     return (
@@ -35,7 +36,7 @@ const BusinessSummary = () => {
             </div>
             <div className="card w-72 rounded-lg bg-white">
                 <figure className="px-10 pt-10">
-                    <img src={money} alt="Shoes" className="rounded-xl w-20 h-20" />
+                    <img src={award} alt="Shoes" className="rounded-xl w-20 h-20" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title text-sky-600">Awards</h2>
