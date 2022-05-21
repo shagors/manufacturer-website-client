@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import fetcher from '../../hooks/api';
+import Tool from './Tool';
 
 const Tools = () => {
+    const [parts, setParts] = useState();
+
+    useEffect( () => {
+        fetch('services.json')
+        .then(res => res.json())
+        .then(data => setParts(data))
+
+        // (async () => {
+        //     const res = await fetcher.get('/service');
+        //     setParts(res.data);
+        // })()
+    } , []);
+
     return (
-        <div>
-            <h1>Our Manufacture Tools</h1>
+        <div className='my-10 lg:px-20'>
+            <h1 className='text-3xl text-center text-primary font-bold'>Our Manufacture Tools</h1>
+            <div className='grid lg:grid-cols-3 gap-5 mt-10'>
+                {
+                    parts?.map(part => <Tool
+                    key={part.id}
+                    part={part}
+                    ></Tool>)
+                }
+            </div>
         </div>
     );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div>
-            <h1>Business Summary page</h1>
+        <div className='mx-20'>
+            <h1 className=''>Our Business Summary</h1>
         </div>
     );
 };
