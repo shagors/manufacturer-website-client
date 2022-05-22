@@ -6,14 +6,10 @@ const Tools = () => {
     const [parts, setParts] = useState([]);
 
     useEffect( () => {
-        fetch('services.json')
-        .then(res => res.json())
-        .then(data => setParts(data))
-
-        // (async () => {
-        //     const res = await fetcher.get('/service');
-        //     setParts(res.data);
-        // })()
+        (async () => {
+            const res = await fetcher.get('/product');
+            setParts(res.data);
+        })()
     } , []);
 
     return (
@@ -22,7 +18,7 @@ const Tools = () => {
             <div className='grid lg:grid-cols-3 gap-5 mt-10'>
                 {
                     parts?.map(part => <Tool
-                    key={part.id}
+                    key={part._id}
                     part={part}
                     ></Tool>)
                 }

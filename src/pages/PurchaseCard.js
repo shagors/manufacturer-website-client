@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import fetcher from '../hooks/api';
 import PurchaseCardDesign from './PurchaseCardDesign';
 import PurchaseModal from './PurchaseModal';
 
@@ -7,14 +8,10 @@ const PurchaseCard = () => {
     const [order, setOrder] = useState(null);
 
     useEffect(() => {
-        fetch('services.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-
-        // (async () => {
-        //     const res = await fetcher.get('/service');
-        //     setParts(res.data);
-        // })()
+        (async () => {
+            const res = await fetcher.get('/product');
+            setProducts(res.data);
+        })()
     }, []);
 
     return (
@@ -22,13 +19,13 @@ const PurchaseCard = () => {
             <div className='grid lg:grid-cols-3 gap-4 my-5'>
                 {
                     products.map(product => <PurchaseCardDesign
-                    key={product.id}
+                    key={product._id}
                     product={product}
                     setOrder={setOrder}
                     ></PurchaseCardDesign>)
                 }
             </div>
-            { order && <PurchaseModal order={order}></PurchaseModal>}
+            { order && <PurchaseModal order={order} setOrder={setOrder}></PurchaseModal>}
         </div>
     );
 };
