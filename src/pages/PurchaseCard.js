@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PurchaseCardDesign from './PurchaseCardDesign';
 
 const PurchaseCard = () => {
     const [products, setProducts] = useState([])
@@ -17,9 +18,12 @@ const PurchaseCard = () => {
 
     return (
         <div>
-            <div>
+            <div className='grid lg:grid-cols-3 gap-4 my-5'>
                 {
-                    products.map(product => <p>{product.name}</p>)
+                    products.map(product => <PurchaseCardDesign
+                    key={product.id}
+                    product={product}
+                    ></PurchaseCardDesign>)
                 }
             </div>
         </div>

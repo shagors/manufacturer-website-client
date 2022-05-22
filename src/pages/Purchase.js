@@ -5,7 +5,7 @@ const Purchase = () => {
 
     return (
         <div>
-            <div className='mt-16 lg:mx-20'>
+            <div className='my-16 lg:mx-20'>
                 <h1 className='text-3xl text-primary text-center'>Our Products List</h1>
                 <PurchaseCard></PurchaseCard>
             </div>
