@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PurchaseCardDesign from './PurchaseCardDesign';
+import PurchaseModal from './PurchaseModal';
 
 const PurchaseCard = () => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const [order, setOrder] = useState(null);
     let today = new Date().toLocaleDateString();
 
     useEffect(() => {
@@ -23,9 +25,11 @@ const PurchaseCard = () => {
                     products.map(product => <PurchaseCardDesign
                     key={product.id}
                     product={product}
+                    setOrder={setOrder}
                     ></PurchaseCardDesign>)
                 }
             </div>
+            { order && <PurchaseModal order={order}></PurchaseModal>}
         </div>
     );
 };
