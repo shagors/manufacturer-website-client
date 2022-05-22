@@ -2,7 +2,7 @@ import React from 'react';
 
 const Purchase = () => {
     return (
-        <div>
+        <div className='mt-16'>
             <h1>This is Purchase Page</h1>
         </div>
     );
