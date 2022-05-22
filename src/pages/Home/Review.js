@@ -3,7 +3,6 @@ import ReviewOne from './ReviewOne';
 
 const Review = () => {
     const [reviews, setReviews] = useState();
-    console.log(reviews);
 
     useEffect(() => {
         fetch('services.json')

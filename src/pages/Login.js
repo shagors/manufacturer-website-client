@@ -48,7 +48,7 @@ const Login = () => {
             <div className='lg:mx-20 flex justify-center items-center h-screen'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
-                        <h2 className="text-center text-2xl font-bold">Login</h2>
+                        <h2 className="text-center text-2xl font-bold">Log In</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-control w-full max-w-xs">
                                 <label value="" className="label">

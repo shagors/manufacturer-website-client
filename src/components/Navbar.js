@@ -24,7 +24,18 @@ const Navbar = ({children}) => {
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/Dashboard'>Dashboard</NavLink>
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/blogs'>Blogs</NavLink>
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/portfolio'>Portfolio</NavLink>
-                            
+                            <div className='flex justify-center items-center'>
+                                <span className='md:px-3 px-1'>{user?.email}</span>
+                                <span className='md:px-3 px-1'>
+                                    {
+                                        user ? (
+                                            <NavLink to='/home' className='btn btn-primary' onClick={() => signOut(auth)}>Logout</NavLink>
+                                        )
+                                        :
+                                        (<NavLink to='/login'>Login</NavLink>)
+                                    }
+                                </span>
+                            </div>
                         </ul>
                     </div>
                 </div>
