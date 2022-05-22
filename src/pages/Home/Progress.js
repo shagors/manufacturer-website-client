@@ -8,15 +8,15 @@ const Progress = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className='grid grid-cols-1 gap-4 mx-28'>
                         <p>MotherBoard</p>
-                        <progress class="progress progress-success w-72 h-5" value="90" max="100"></progress>
+                        <progress className="progress progress-success w-72 h-5" value="90" max="100"></progress>
                         <p>ChipSet</p>
-                        <progress class="progress progress-success w-72 h-5" value="80" max="100"></progress>
+                        <progress className="progress progress-success w-72 h-5" value="80" max="100"></progress>
                         <p>Ram</p>
-                        <progress class="progress progress-success w-72 h-5" value="95" max="100"></progress>
+                        <progress className="progress progress-success w-72 h-5" value="95" max="100"></progress>
                         <p>HDD & SSD</p>
-                        <progress class="progress progress-success w-72 h-5" value="85" max="100"></progress>
+                        <progress className="progress progress-success w-72 h-5" value="85" max="100"></progress>
                         <p>Battery</p>
-                        <progress class="progress progress-success w-72 h-5" value="90" max="100"></progress>
+                        <progress className="progress progress-success w-72 h-5" value="90" max="100"></progress>
                     </div>
                     <div className='mx-10'>
                         <h1 className="text-5xl font-bold">Our Factory Performance</h1>

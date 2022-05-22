@@ -3,7 +3,7 @@ import fetcher from '../../hooks/api';
 import Tool from './Tool';
 
 const Tools = () => {
-    const [parts, setParts] = useState();
+    const [parts, setParts] = useState([]);
 
     useEffect( () => {
         fetch('services.json')
