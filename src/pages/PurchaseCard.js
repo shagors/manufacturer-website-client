@@ -5,7 +5,6 @@ import PurchaseModal from './PurchaseModal';
 const PurchaseCard = () => {
     const [products, setProducts] = useState([]);
     const [order, setOrder] = useState(null);
-    let today = new Date().toLocaleDateString();
 
     useEffect(() => {
         fetch('services.json')
