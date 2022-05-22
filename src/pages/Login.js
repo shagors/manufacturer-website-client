@@ -22,15 +22,11 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
-    if(user || gUser){
-        navigate(from, {replace: true});
-    }
-
-    // useEffect( () => {
-    //     if(token){
-    //         navigate(from, {replace: true});
-    //     }
-    // } , [token, from, navigate]);
+    useEffect( () => {
+        if(user || gUser){
+            navigate(from, {replace: true});
+        }
+    } , [user, gUser, from, navigate]);
 
     let signInError;
 

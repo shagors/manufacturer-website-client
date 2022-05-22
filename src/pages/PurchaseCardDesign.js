@@ -15,7 +15,7 @@ const PurchaseCardDesign = ({product, setOrder}) => {
                     <p className="">Minimum Order: {minimumOrder}</p>
                     <p className="">Available Quantity: {availableQuantity}</p>
                     <div className="card-actions">
-                        <label onClick={() => setOrder(product)} disabled={availableQuantity == 0} for="purchase-modal" className="btn btn-primary">Order Now</label>
+                        <label onClick={() => setOrder(product)} disabled={availableQuantity == 0} htmlFor="purchase-modal" className="btn btn-primary">Order Now</label>
                     </div>
                 </div>
             </div>
