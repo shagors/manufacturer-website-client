@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login";
 import MyPortfolio from "./pages/MyPortfolio";
 import Purchase from "./pages/Purchase";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/blogs" element={<Blogs></Blogs>}>Blogs</Route>
           <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}>Portfolio</Route>
           <Route path="/Login" element={<Login></Login>}>Login</Route>
+          <Route path="/register" element={<Register></Register>}>Login</Route>
           <Route path="/footer" element={<Footer></Footer>}></Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>

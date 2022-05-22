@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../components/Footer';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import { useForm } from 'react-hook-form';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 const Login = () => {
-    const [signInWithGoogle, gUser, gLoading, GgError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
@@ -13,17 +16,17 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const [token] = useToken(user || gUser);
+    // const [token] = useToken(user || gUser);
 
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
-    useEffect( () => {
-        if(token){
-            navigate(from, {replace: true});
-        }
-    } , [token, from, navigate]);
+    // useEffect( () => {
+    //     if(token){
+    //         navigate(from, {replace: true});
+    //     }
+    // } , [token, from, navigate]);
 
     let signInError;
 
@@ -88,9 +91,9 @@ const Login = () => {
                                 </label>
                             </div>
                             {signInError}
-                            <input className='btn w-full max-w-xs' type="submit" value='Login'/>
+                            <input className='btn w-full max-w-xs btn-primary' type="submit" value='Login'/>
                         </form>
-                        <p><small>New to Doctors Portal <Link className='text-primary' to='/signup'>Create New Account</Link></small></p>
+                        <p><small>New Customer's On hear <Link className='text-primary' to='/register'>Create New Account</Link></small></p>
                         <div className='divider'>OR</div>
                         <button onClick={() => signInWithGoogle()} className='btn btn-outline'>Continue with Google</button>
                     </div>
