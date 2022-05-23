@@ -1,10 +1,11 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 import auth from '../firebase.init';
+import useToken from '../hooks/useToken';
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -17,15 +18,13 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
 
     const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || '/';
     let signInError;
 
-    if(user || gUser){
-        navigate(from, {replace: true});
+    if(token){
+        navigate('/purchase');
     }
 
     if(loading || gLoading || updating){
@@ -39,7 +38,7 @@ const Register = () => {
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({displayName: data?.name});
-        navigate('/purchase');
+        
     };
 
 
