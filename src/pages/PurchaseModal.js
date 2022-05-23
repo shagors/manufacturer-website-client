@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
-import fetcher from '../hooks/api';
 
-const PurchaseModal = ({order, setOrder}) => {
+const PurchaseModal = ({order, setOrder, refetch}) => {
     const { _id,name, availableQuantity, } = order;
     const today = new Date().toLocaleDateString();
     const [user] = useAuthState(auth);
@@ -35,6 +34,7 @@ const PurchaseModal = ({order, setOrder}) => {
         .then(res => res.json())
         .then(data => {
             toast('Your Order is Saved Please Pay');
+            refetch();
             setOrder(null);
         })
 

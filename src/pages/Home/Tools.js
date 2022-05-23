@@ -10,7 +10,7 @@ const Tools = () => {
             const res = await fetcher.get('/product');
             setParts(res.data);
         })()
-    } , []);
+    } , [parts]);
 
     return (
         <div className='my-10 lg:px-20'>
