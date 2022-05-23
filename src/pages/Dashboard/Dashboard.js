@@ -14,10 +14,11 @@ const Dashboard = () => {
                     </div> 
                     <div class="drawer-side">
                         <label for="my-drawer-2" class="drawer-overlay"></label> 
-                        <ul class="menu p-4 overflow-y-auto w-64 bg-base-100 text-base-content">
+                        <ul class="menu p-4 overflow-y-auto w-52 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
                         <li><Link to='/dashboard'>Your Orders</Link></li>
                         <li><Link to='/dashboard/review'>Your Reviews</Link></li>
+                        <li><Link to='/dashboard/profile'>Your Profile</Link></li>
                         </ul>
                     </div>
                 </div>

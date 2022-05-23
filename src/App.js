@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Dashboard from "./pages/Dashboard/Dashboard";
 import MyOrders from "./pages/Dashboard/MyOrders";
 import Reviews from "./pages/Dashboard/Reviews";
+import MyProfile from "./pages/Dashboard/MyProfile";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           </RequireAuth>}>
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path="review" element={<Reviews></Reviews>}></Route>
+            <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           </Route>
           <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>

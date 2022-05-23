@@ -17,7 +17,7 @@ const Tools = () => {
             <h1 className='text-4xl text-center text-primary font-bold uppercase'>Our Manufacture Parts</h1>
             <div className='grid lg:grid-cols-3 gap-5 mt-10'>
                 {
-                    parts?.map(part => <Tool
+                    parts?.slice(0,6)?.map(part => <Tool
                     key={part._id}
                     part={part}
                     ></Tool>)
