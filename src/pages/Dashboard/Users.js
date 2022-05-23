@@ -1,9 +1,10 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../components/Loading';
+import UsersTable from './UsersTable';
 
 const Users = () => {
-    const {data: users, isLoading} = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const {data: users, isLoading, refetch} = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -29,14 +30,12 @@ const Users = () => {
                     </thead>
                     <tbody>
                         {
-                            users?.map((user, index) => 
-                                <tr>
-                                    <th>{index + 1}</th>
-                                    <td>{user.email}</td>
-                                    <td><button className='btn btn-xs btn-primary'>Make Admin</button></td>
-                                    <td><button className='btn btn-xs btn-error'>Delete Admin</button></td>
-                                </tr>
-                            )
+                            users?.map((user, index) => <UsersTable
+                            key={user._id}
+                            index={index}
+                            user={user}
+                            refetch={refetch}
+                            ></UsersTable>)
                         }
                     </tbody>
                 </table>
