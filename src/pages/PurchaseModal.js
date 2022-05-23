@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
 const PurchaseModal = ({order, setOrder, refetch}) => {
-    const { _id,name, availableQuantity, } = order;
+    const { _id,name, availableQuantity, price} = order;
     const today = new Date().toLocaleDateString();
     const [user] = useAuthState(auth);
 
@@ -12,6 +12,7 @@ const PurchaseModal = ({order, setOrder, refetch}) => {
         event.preventDefault();
         const orderQuantity = event.target.quantity.value;
         const availableProductQuan = parseInt(availableQuantity) - parseInt(orderQuantity);
+        // const price = parseInt(orderQuantity) * price;
         console.log(_id, name, orderQuantity, availableProductQuan);
         
         const orderDetails = {
@@ -20,6 +21,7 @@ const PurchaseModal = ({order, setOrder, refetch}) => {
             user: user.email,
             availableProductQuan: availableProductQuan,
             orderQuantity: orderQuantity,
+            price: price,
             ordererName: user.displayName,
             phone: event.target.phone.value,
         }
@@ -52,9 +54,9 @@ const PurchaseModal = ({order, setOrder, refetch}) => {
                         <input type="text" name='name'disabled value={user?.displayName} className="input input-bordered w-full max-w-xs" />
                         <input type="email" name='email' disabled value={user?.email} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='phone' placeholder="Phone" className="input input-bordered w-full max-w-xs" />
-                        <input type="text" placeholder="Address" className="input input-bordered w-full max-w-xs" />
-                        <input type="text" disabled value={availableQuantity} className="input input-bordered w-full max-w-xs" />
+                        <input type="number" disabled value={availableQuantity} className="input input-bordered w-full max-w-xs" />
                         <input type="number" name='quantity' placeholder="Your Order Quantity" className="input input-bordered w-full max-w-xs" />
+                        <input type="number" name='price' disabled value={price} className="input input-bordered w-full max-w-xs" />
                         <input type="submit" value='Submit' className="btn btn-primary w-full max-w-xs" />
                     </form>
                 </div>

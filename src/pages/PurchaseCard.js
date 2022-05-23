@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import fetcher from '../hooks/api';
+import React, {  useState } from 'react';
 import PurchaseCardDesign from './PurchaseCardDesign';
 import PurchaseModal from './PurchaseModal';
-import {useQuery,useMutation} from 'react-query'
+import {useQuery} from 'react-query'
 
 const PurchaseCard = () => {
     const [order, setOrder] = useState(null);
