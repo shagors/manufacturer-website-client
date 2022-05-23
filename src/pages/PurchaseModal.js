@@ -1,17 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../firebase.init';
+import fetcher from '../hooks/api';
 
 const PurchaseModal = ({order, setOrder}) => {
-    const {name, availableQuantity} = order;
+    const { _id,name, availableQuantity, } = order;
     const today = new Date().toLocaleDateString();
     const [user] = useAuthState(auth);
 
     const handleOrder = event => {
         event.preventDefault();
-        const date = event.target.name.value;
-        console.log(date, name);
-        setOrder(null);
+        const orderQuantity = event.target.quantity.value;
+        const availableProductQuan = parseInt(availableQuantity) - parseInt(orderQuantity);
+        console.log(_id, name, orderQuantity, availableProductQuan);
+        
+        const orderDetails = {
+            orderId : _id,
+            order: name,
+            user: user.email,
+            availableProductQuan: availableProductQuan,
+            orderQuantity: orderQuantity,
+            ordererName: user.displayName,
+            phone: event.target.phone.value,
+        }
+
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orderDetails)
+        })
+        .then(res => res.json())
+        .then(data => {
+            toast('Your Order is Saved Please Pay');
+            setOrder(null);
+        })
+
     }
 
     return (

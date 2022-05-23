@@ -9,6 +9,8 @@ import MyPortfolio from "./pages/MyPortfolio";
 import Purchase from "./pages/Purchase";
 import Register from "./pages/Register";
 import RequireAuth from "./pages/RequireAuth";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
           <Route path="/footer" element={<Footer></Footer>}></Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
+        <ToastContainer></ToastContainer>
       </Navbar>
     </div>
   );
