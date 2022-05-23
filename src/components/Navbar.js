@@ -21,7 +21,7 @@ const Navbar = ({children}) => {
                         <ul className="menu menu-horizontal gap-x-4">
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/home'>Home</NavLink>
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/purchase'>Purchase</NavLink>
-                            <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/Dashboard'>Dashboard</NavLink>
+                            {user && <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/Dashboard'>Dashboard</NavLink>}
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/blogs'>Blogs</NavLink>
                             <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/portfolio'>Portfolio</NavLink>
                             <div className='flex justify-center items-center'>
