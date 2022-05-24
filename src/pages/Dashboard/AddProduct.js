@@ -29,7 +29,7 @@ const AddProduct = () => {
                     description: data.description,
                     img: img,
                 }
-                fetch('http://localhost:5000/product', {
+                fetch('https://pacific-ridge-38840.herokuapp.com/product', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
