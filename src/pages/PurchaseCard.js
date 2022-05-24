@@ -6,7 +6,10 @@ import {useQuery} from 'react-query'
 const PurchaseCard = () => {
     const [order, setOrder] = useState(null);
 
-    const {data: products, refetch} = useQuery('product', () =>  fetch('http://localhost:5000/product').then(res => res.json()))
+    const {
+        data: products,
+        refetch
+    } = useQuery('product', () => fetch('https://pacific-ridge-38840.herokuapp.com/product').then(res => res.json()))
 
     return (
         <div>

@@ -26,7 +26,7 @@ const PurchaseModal = ({order, setOrder, refetch}) => {
             phone: event.target.phone.value,
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://pacific-ridge-38840.herokuapp.com/order', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

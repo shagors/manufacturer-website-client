@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const fetcher = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://pacific-ridge-38840.herokuapp.com/',
 });
 
 export default fetcher;

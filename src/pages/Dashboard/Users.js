@@ -4,7 +4,11 @@ import Loading from '../../components/Loading';
 import UsersTable from './UsersTable';
 
 const Users = () => {
-    const {data: users, isLoading, refetch} = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const {
+        data: users,
+        isLoading,
+        refetch
+    } = useQuery('users', () => fetch('https://pacific-ridge-38840.herokuapp.com/user', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
