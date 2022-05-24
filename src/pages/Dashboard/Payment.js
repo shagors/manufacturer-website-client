@@ -10,7 +10,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L0fnhKA5GQnus2VzJO9R4QXKvEBIazsNhBj0EzZusUKAtXDjVXLPbsAdNqjSgf1zrbb8VrvbpQvIfTsJhtwixZ600iGxiMEC8')
 const Payment = () => {
     const {id} = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://pacific-ridge-38840.herokuapp.com/order/${id}`;
 
     const {data: order, isLoading} = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
@@ -35,7 +35,9 @@ const Payment = () => {
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                 <div className="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm></CheckoutForm>
+                        <CheckoutForm
+                        order={order}
+                        ></CheckoutForm>
                     </Elements>
                 </div>
             </div>
