@@ -1,30 +1,7 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
-const ManageProductsRow = ({product, index, refetch}) => {
+const ManageProductsRow = ({product, index, refetch, setDeleteProduct }) => {
     const {name, img, availableQuantity} = product;
-
-    const handleDelete = id => {
-        const proceed = window.confirm('Are you sure you want to delete ?');
-        if(proceed){
-            const url = `http://localhost:5000/product/${id}`;
-            fetch(url, {
-                method: 'DELETE',
-                headers: {
-                    'content-type': 'application/json',
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if(data.deletedCount){
-                    toast('Product Deleted Complete');
-                    refetch();
-                }
-            })
-        }
-    }
 
     return (
         <tr>
@@ -38,7 +15,9 @@ const ManageProductsRow = ({product, index, refetch}) => {
             </td>
             <td>{name}</td>
             <td>{availableQuantity}</td>
-            <td><button onClick={() => handleDelete(product._id)} className='btn btn-xs btn-error'>Delete</button></td>
+            <td>
+                <label onClick={() => setDeleteProduct(product)} htmlFor="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
+                </td>
             <td className=''>Update</td>
         </tr>
     );
