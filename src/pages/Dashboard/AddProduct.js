@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 
 const AddProduct = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const imageStorageKey='dbc1132a143866016b0f2959d03a6274';
 
 
     const onSubmit = async data => {
-        const image = data.image[0];
+        const image = data?.image[0];
         const formData = new FormData();
         formData.append('image', image);
         const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
@@ -20,9 +20,36 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(result => {
             if (result.success) {
-                const img = result.data.url;
+                const img = result?.data?.url;
+                const product = {
+                    name: data.name,
+                    price: data.price,
+                    minimumOrder: data.minimumOrder,
+                    availableQuantity: data.quantity,
+                    description: data.description,
+                    img: img,
+                }
+                fetch('http://localhost:5000/product', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    },
+                    body: JSON.stringify(product)
+                })
+                .then(res => res.json())
+                .then(inserted => {
+                    if(inserted.insertedId){
+                        toast.success('Product Added Successfully');
+                        reset();
+                    }
+                    else{
+                        toast.error('Product Upload Failed');
+                    }
+                })
             }
-        })
+        });
+        console.log(data);
     };
 
 
