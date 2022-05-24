@@ -48,7 +48,7 @@ const MyOrders = () => {
                     <tbody>
                         {
                             orders?.map((order, index) => 
-                                <tr>
+                                <tr key={index}>
                                     <th>{index + 1}</th>
                                     <td>{order.order}</td>
                                     <td>{order.availableProductQuan} <span className='text-purple-600'>units</span></td>

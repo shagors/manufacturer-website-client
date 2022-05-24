@@ -20,8 +20,8 @@ const ManageProducts = () => {
     return (
         <div>
             <h2 className='text-xl text-purple-500 font-bold'>Manage All Products: {products?.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -38,6 +38,7 @@ const ManageProducts = () => {
                             key={product._id}
                             index={index}
                             product={product}
+                            refetch={refetch}
                             ></ManageProductsRow>)
                         }
                     </tbody>
