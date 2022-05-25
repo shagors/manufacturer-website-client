@@ -22,7 +22,7 @@ const Navbar = ({children}) => {
                             </label>
                         </div>
                         <div className="flex-none hidden lg:block">
-                            <ul className="menu menu-horizontal gap-x-4">
+                            <ul className="menu menu-horizontal gap-x-4 text-black">
                                 <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/home'>Home</NavLink>
                                 <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/purchase'>Purchase</NavLink>
                                 {user && <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/Dashboard'>Dashboard</NavLink>}
@@ -48,7 +48,7 @@ const Navbar = ({children}) => {
                 </div> 
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" className="drawer-overlay"></label> 
-                    <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
+                    <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-black">
                         <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/home'>Home</NavLink>
                         <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/purchase'>Purchase</NavLink>
                         <NavLink className='rounded-lg hover:bg-primary hover:text-white p-3' to='/Dashboard'>Dashboard</NavLink>
