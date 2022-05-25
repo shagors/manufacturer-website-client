@@ -1,8 +1,8 @@
 # Warehouse Management
 
-[WareHouse Management]().
+[WareHouse Management](https://manufacture-website-1a55c.web.app/).
 
-[Server link]()
+[Server link](https://pacific-ridge-38840.herokuapp.com/)
 
 ## What Special Features My site 
 

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Motherboard",
+        "name": "Marry Mia",
         "price": "800",
         "minimumOrder": "50",
         "availableQuantity": "0",
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "name": "Processor",
+        "name": "Albert Jhon",
         "price": "1000",
         "minimumOrder": "100",
         "availableQuantity": "11000",
@@ -19,7 +19,7 @@
     },
     {
         "id": 3,
-        "name": "Ram",
+        "name": "Ema Watson",
         "price": "150",
         "minimumOrder": "200",
         "availableQuantity": "1150",
@@ -28,7 +28,7 @@
     },
     {
         "id": 4,
-        "name": "Battery",
+        "name": "Brad Pitt",
         "price": "180",
         "minimumOrder": "300",
         "availableQuantity": "1180",
@@ -37,7 +37,7 @@
     },
     {
         "id": 5,
-        "name": "Network Lan",
+        "name": "Jack Sparrow",
         "price": "700",
         "minimumOrder": "100",
         "availableQuantity": "1700",
@@ -46,7 +46,7 @@
     },
     {
         "id": 6,
-        "name": "Mouse",
+        "name": "Williamson",
         "price": "300",
         "minimumOrder": "300",
         "availableQuantity": "1300",
