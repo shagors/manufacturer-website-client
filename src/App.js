@@ -24,7 +24,7 @@ import Payment from "./pages/Dashboard/Payment";
 
 function App() {
   return (
-    <div className="bg-slate-200">
+    <div >
       <Navbar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
