@@ -21,11 +21,11 @@ const Dashboard = () => {
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
                         <ul className="menu p-4 overflow-y-auto w-52 bg-base-100 text-base-content">
                             { !admin &&
-                                <li><Link to='/dashboard'>Your Orders</Link></li>}
+                                <li><Link to='/dashboard/orders'>Your Orders</Link></li>}
                             { !admin &&
                                 <li><Link to='/dashboard/review'>Your Reviews</Link></li>}
 
-                            <li><Link to='/dashboard/profile'>Your Profile</Link></li>
+                            <li><Link to='/dashboard'>Your Profile</Link></li>
                             {admin && 
                                 <>
                                     <li><Link to='/dashboard/users'>Make Admin</Link></li>

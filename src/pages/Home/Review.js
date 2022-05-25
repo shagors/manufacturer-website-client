@@ -5,14 +5,9 @@ const Review = () => {
     const [reviews, setReviews] = useState();
 
     useEffect(() => {
-        fetch('services.json')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
-            .then(data => setReviews(data))
-
-        // (async () => {
-        //     const res = await fetcher.get('/service');
-        //     setParts(res.data);
-        // })()
+            .then(data => setReviews(data));
     }, []);
 
     return (

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ReviewOne = ({review}) => {
-    const {img, name, description} = review;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -11,8 +10,8 @@ const ReviewOne = ({review}) => {
                     </div>
                 </div>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{name}</h2>
-                    <p>{description}</p>
+                    <h2 className="card-title">{review.name}</h2>
+                    <p>{review.review}</p>
                     <div className="rating">
                         <input type="radio" name="rating-1" className="mask mask-star" />
                         <input type="radio" name="rating-1" className="mask mask-star" />

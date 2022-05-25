@@ -30,3 +30,4 @@
 * MongoDB
 * JWT
 * Express.js
+* Stripe for payment

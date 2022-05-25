@@ -2,55 +2,16 @@
     {
         "id": 1,
         "name": "Marry Mia",
-        "price": "800",
-        "minimumOrder": "50",
-        "availableQuantity": "0",
-        "description": "We manufacture ultra slim and most adorable design mother board. Our every motherboard quality is best and None other",
-        "img": "https://images6.alphacoders.com/459/thumb-1920-459032.jpg"
+        "review": "I uses there products around 10yrs they are best for manufacturing "
     },
     {
         "id": 2,
         "name": "Albert Jhon",
-        "price": "1000",
-        "minimumOrder": "100",
-        "availableQuantity": "11000",
-        "description": "Our Processor is best. We don't just if our users always good our products thats why we try to give best products",
-        "img": "https://media.istockphoto.com/photos/computer-education-training-class-picture-id1210738055?k=20&m=1210738055&s=612x612&w=0&h=xNYnBsQSBTq5RpeUYPvpnU3qhU0zuoJJKex7TIu4bZw="
+        "review": "There Products Always I uses Their products around 5 years and dont face any single issues"
     },
     {
         "id": 3,
         "name": "Ema Watson",
-        "price": "150",
-        "minimumOrder": "200",
-        "availableQuantity": "1150",
-        "description": "Ram is important for computer. We provide best ram DDR4, DDR5 & DDR6 most powerful for gaming RAM we manufacture",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2xR_nZWW2N3MrM0WobcTcWXw_ZKa5ZqKeRg&usqp=CAU"
-    },
-    {
-        "id": 4,
-        "name": "Brad Pitt",
-        "price": "180",
-        "minimumOrder": "300",
-        "availableQuantity": "1180",
-        "description": "We provide laptop poly lithion or rechargeable battery. This battery quality is good for long lasting ",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdAUy1gayrFl-lG0PL0gsNexoUE4awRQQ6nA&usqp=CAU"
-    },
-    {
-        "id": 5,
-        "name": "Jack Sparrow",
-        "price": "700",
-        "minimumOrder": "100",
-        "availableQuantity": "1700",
-        "description": "We provide Computer lan cable. Our Cat and optical fiber cable is best for data transfering for any where you you want",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbzdvlITP2XPODqLShdVEEZJFa-0ZO6D5CQ&usqp=CAU"
-    },
-    {
-        "id": 6,
-        "name": "Williamson",
-        "price": "300",
-        "minimumOrder": "300",
-        "availableQuantity": "1300",
-        "description": "Our company mouse is best best for gaming performance its dpi and sensor is the best for gamin",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9kMhoo_KjQJShlOqkLyKg0BTLnif5yqoRsQ&usqp=CAU"
+        "review": "They are punctual for their products quality if any warranty issues they support huge"
     }
 ]
