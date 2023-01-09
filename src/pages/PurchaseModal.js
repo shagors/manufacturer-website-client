@@ -26,7 +26,7 @@ const PurchaseModal = ({order, setOrder, refetch}) => {
             phone: event.target.phone.value,
         }
 
-        fetch('https://pacific-ridge-38840.herokuapp.com/order', {
+        fetch('https://manufacturer-8az5.onrender.com/order', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

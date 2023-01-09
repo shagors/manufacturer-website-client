@@ -5,7 +5,7 @@ const Review = () => {
     const [reviews, setReviews] = useState();
 
     useEffect(() => {
-        fetch('https://pacific-ridge-38840.herokuapp.com/review')
+        fetch('https://manufacturer-8az5.onrender.com/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

@@ -8,7 +8,7 @@ const Users = () => {
         data: users,
         isLoading,
         refetch
-    } = useQuery('users', () => fetch('https://pacific-ridge-38840.herokuapp.com/user', {
+    } = useQuery('users', () => fetch('https://manufacturer-8az5.onrender.com/user', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

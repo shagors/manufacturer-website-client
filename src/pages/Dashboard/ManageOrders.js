@@ -5,7 +5,7 @@ const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('https://pacific-ridge-38840.herokuapp.com/order', {
+        fetch('https://manufacturer-8az5.onrender.com/order', {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

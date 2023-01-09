@@ -14,7 +14,7 @@ const CheckoutForm = ({order}) => {
     const {_id, price, ordererName, user} = order;
 
     useEffect(() => {
-        fetch('https://pacific-ridge-38840.herokuapp.com/create-payment-intent', {
+        fetch('https://manufacturer-8az5.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -80,7 +80,7 @@ const CheckoutForm = ({order}) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`https://pacific-ridge-38840.herokuapp.com/order/${_id}`, {
+            fetch(`https://manufacturer-8az5.onrender.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

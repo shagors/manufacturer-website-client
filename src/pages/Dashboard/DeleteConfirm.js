@@ -5,7 +5,7 @@ const DeleteConfirm = ({deleteProduct, refetch, setDeleteProduct}) => {
     const {name, _id} = deleteProduct;
 
     const handleDelete = id => {
-        const url = `https://pacific-ridge-38840.herokuapp.com/product/${id}`;
+        const url = `https://manufacturer-8az5.onrender.com/product/${id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

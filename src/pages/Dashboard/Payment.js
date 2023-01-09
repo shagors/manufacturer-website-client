@@ -10,7 +10,7 @@ import CheckoutForm from './CheckoutForm';
 const stripePromise = loadStripe('pk_test_51L0fnhKA5GQnus2VzJO9R4QXKvEBIazsNhBj0EzZusUKAtXDjVXLPbsAdNqjSgf1zrbb8VrvbpQvIfTsJhtwixZ600iGxiMEC8')
 const Payment = () => {
     const {id} = useParams();
-    const url = `https://pacific-ridge-38840.herokuapp.com/order/${id}`;
+    const url = `https://manufacturer-8az5.onrender.com/order/${id}`;
 
     const {data: order, isLoading} = useQuery(['order', id], () => fetch(url, {
         method: 'GET',

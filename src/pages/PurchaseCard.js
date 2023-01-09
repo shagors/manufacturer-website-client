@@ -9,7 +9,7 @@ const PurchaseCard = () => {
     const {
         data: products,
         refetch
-    } = useQuery('product', () => fetch('https://pacific-ridge-38840.herokuapp.com/product').then(res => res.json()))
+    } = useQuery('product', () => fetch('https://manufacturer-8az5.onrender.com/product').then(res => res.json()))
 
     return (
         <div>

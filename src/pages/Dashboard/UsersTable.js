@@ -5,7 +5,7 @@ const UsersTable = ({user, index, refetch}) => {
     const {email, role} = user;
 
     const makeAdmin = () => {
-        fetch(`https://pacific-ridge-38840.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://manufacturer-8az5.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

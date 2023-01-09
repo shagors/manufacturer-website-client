@@ -29,7 +29,7 @@ const AddProduct = () => {
                     description: data.description,
                     img: img,
                 }
-                fetch('https://pacific-ridge-38840.herokuapp.com/product', {
+                fetch('https://manufacturer-8az5.onrender.com/product', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

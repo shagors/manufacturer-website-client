@@ -11,7 +11,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://pacific-ridge-38840.herokuapp.com/order?user=${user.email}`, {
+            fetch(`https://manufacturer-8az5.onrender.com/order?user=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

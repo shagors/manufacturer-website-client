@@ -11,7 +11,7 @@ const ManageProducts = () => {
         data: products,
         isLoading,
         refetch
-    } = useQuery('product', () => fetch('https://pacific-ridge-38840.herokuapp.com/product', {
+    } = useQuery('product', () => fetch('https://manufacturer-8az5.onrender.com/product', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
